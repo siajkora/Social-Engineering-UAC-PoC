@@ -15,13 +15,18 @@ Open-source Proof of Concept (PoC) for obtaining **Administrator privileges** vi
 - **No Python required.**
 - **No dependencies.**
 - Runs natively on Windows.
-
-## 🤝 Credits
-Core logic and inspiration based on research from the **Ebola Man** YouTube channel. Implemented and adapted by **siajkora**.
-
+- 
 ## 🔍 How it works
 This PoC demonstrates a persistent social engineering loop:
 1. A fake administrative prompt (simulated via **VBS**) pops up asking for credentials.
 2. If the user clicks **"No"** or closes the window, the prompt reappears every **2 seconds**, forcing the user to interact.
 3. The prompt is designed to look like an authentic **Windows System UI**.
 4. Once the user clicks **"Yes"** and enters the administrator password, a **new CMD window with full Administrator privileges is launched in a minimized state**.
+5. To stop the loop and terminate the program, run the included `kill.bat` file.
+
+## 🤝 Credits
+Core logic and inspiration based on research from the **Ebola Man** YouTube channel. Implemented and adapted by **siajkora**.
+## 🚀 How to use
+1. Download the file and run `main.vbs`, then ask the administrator to enter the password into the fake VBS window.
+2. Enjoy Admin privileges! A new Command Prompt (CMD) with full administrator rights will open in a minimized state.
+3. **Important:** For the program to work correctly, all existing CMD windows must be closed before running the script.
